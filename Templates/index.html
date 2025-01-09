@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametrización de PLC</title>
+    <style>
+        /* Estilos CSS aquí */
+        body {
+            background-color: #f5f8f8;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 50px auto;
+            width: 50%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        }
+        input[type="text"],
+        select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding-right: 30px;
+            background-image: url('arrow.png');
+            background-repeat: no-repeat;
+            background-position: -10px center;
+            width: 100%;
+            box-sizing: border-box;
+            background-size: 20px;
+        }
+        input[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Parametrización de PLC</h1>
+        <form action="/configure" method="POST">
+            <label for="ip">IP del PLC:</label>
+            <input type="text" id="ip" name="ip" required>
+
+            <label for="port">Puerto:</label>
+            <input type="text" id="port" name="port" required>
+
+            <label for="timeout">Timeout (ms):</label>
+            <input type="text" id="timeout" name="timeout" required>
+
+            <label for="protocol">Protocolo:</label>
+            <select id="protocol" name="protocol" required>
+                <option value="modbus">Modbus</option>
+                <option value="s7">S7</option>
+                <option value="ethernetip">EtherNet/IP</option>
+            </select>
+
+            <label for="frequency">Frecuencia de Adquisición (ms):</label>
+            <input type="text" id="frequency" name="frequency" required>
+
+            <input type="submit" value="Guardar Configuración">
+        </form>
+    </div>
+</body>
+</html>
