@@ -2,6 +2,8 @@
 
 Este repositorio contiene una solución basada en **Node.js** para la adquisición de datos desde un PLC Siemens utilizando la librería **nodes7**. Los datos son leídos desde un bloque de datos (DB) del PLC y publicados en un servidor MQTT cuando se detectan cambios. Además, incluye un **web service** desarrollado con **Express** que permite configurar los parámetros del PLC de manera dinámica a través de una interfaz web.
 
+Más proyectos míos en **[andersein.com](https://andersein.com)**.
+
 ## Estructura del proyecto
 
 ### Archivos principales
